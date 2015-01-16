@@ -1,0 +1,60 @@
+# Header
+menu:
+  主页: /
+  C++: /tags/C++
+  Python: /tags/Python
+  机器学习: /tags/ML
+  NLP: /tags/NLP
+  随笔: /tags/随笔
+  所有文章: /archives
+
+# SubNav
+subnav:
+  github: "https://github.com/KwangKa"
+  weibo: "http://www.weibo.com/p/1005051776176465"
+  # rss: "#"
+  # facebook: "#"
+  # google: "#"
+  # twitter: "#"
+  # linkedin: "#"
+
+rss: /atom.xml
+
+# Content
+excerpt_link: more
+fancybox: true
+
+# Miscellaneous
+google_analytics: ''
+favicon: /favicon.png
+
+#你的头像
+#avatar: "http://ww3.sinaimg.cn/mw690/69de4d51gw1dzenfnmgv2j.jpg"
+avatar: "http://himg.bdimg.com/sys/portrait/item/7fd86363e7bfbc4a01"
+#avatar: "http://img3.douban.com/view/photo/photo/public/p1478169563.jpg"
+
+#是否开启分享
+share: true
+#是否开启多说评论，填写你在多说申请的项目名称
+#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
+duoshuo: true
+#是否开启云标签
+tagcloud: true
+
+#是否开启友情链接
+#不开启——
+friends: false
+#开启——
+#friends:
+#  奥巴马的博客: http://localhost:4000/
+#  卡卡的美丽传说: http://localhost:4000/
+#  本泽马的博客: http://localhost:4000/
+#  吉格斯的博客: http://localhost:4000/
+#  习大大大不同: http://localhost:4000/
+#  托蒂的博客: http://localhost:4000/
+
+#是否开启“关于我”。
+#不开启——
+aboutme: false
+#开启——
+#aboutme: EE硕士在读
