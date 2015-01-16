@@ -3,8 +3,8 @@ menu:
   主页: /
   C++: /tags/C++
   Python: /tags/Python
-  机器学习: /tags/ML
-  NLP: /tags/NLP
+  #机器学习: /tags/ML
+  #NLP: /tags/NLP
   随笔: /tags/随笔
   所有文章: /archives
 
