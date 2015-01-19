@@ -33,6 +33,7 @@ URL上的"map" translate后得到"ocr", 这就得到了第三关的地址 http:/
 for c in set(msg):
     print c, msg.count(c)
 # 得到
+'''
 1219
 ! 6079
 # 6115
@@ -58,6 +59,7 @@ t 1
 y 1
 { 6046
 } 6105
+'''
 ```
 把只出现一次的那几个字母组合一下, 得到"equality", 替换URL里的"ocr"得到 http://www.pythonchallenge.com/pc/def/equality.html
 

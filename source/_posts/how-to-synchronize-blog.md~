@@ -7,7 +7,7 @@ tags: [随笔]
 
 假定在电脑A上成功搭建了博客, 也同步到了github上的仓库username.github.io 现在想在电脑B上也能更新博客, 并同步到github上. 过程如下:
 
-首先, 在github上再键一个repository, 假定为HexoBlog. 进到电脑A上的博客的文件夹. 如果你的博客主题是从github上克隆下来的, 要把主题文件夹里的.git文件夹删掉. 以我自己的为例, 我用的主题是yilia, 用 ls -la命令就看到 thems/yilia/ 下面的隐藏文件夹.git. 然后删掉.
+首先, 在github上再键一个repository, 假定为HexoBlog. 进到电脑A上的博客的文件夹. 如果你的博客主题是从github上克隆下来的, 要把主题文件夹里的.git文件夹删掉. 以我自己的为例, 我用的主题是[yilia](https://github.com/litten/hexo-theme-yilia), 用 ls -la命令就看到 thems/yilia/ 下面的隐藏文件夹.git. 然后删掉.
 ```Bash
 ls -la themes/yilia
 rm -rf themes/yilia/.git

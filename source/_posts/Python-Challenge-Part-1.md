@@ -11,7 +11,7 @@ tags: [Python]
 2 ** 38
 ```
 得到第二关地址http://www.pythonchallenge.com/pc/def/274877906944.html
-
+<!-- more -->
 <br />
 [第1关](http://www.pythonchallenge.com/pc/def/274877906944.html)
 根据图片上的提示, 应该是要做一个映射. 再加上"think twice"这个提示, 应该可以猜出是平移映射两位. 这里用到string的translate来完成

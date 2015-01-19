@@ -55,6 +55,6 @@ friends: false
 
 #是否开启“关于我”。
 #不开启——
-aboutme: false
+#aboutme: false
 #开启——
-#aboutme: EE硕士在读
+aboutme: EE硕士在读

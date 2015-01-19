@@ -12,6 +12,7 @@ tags: [随笔]
 ls -la themes/yilia
 rm -rf themes/yilia/.git
 ```
+<!-- more -->
 好了, 接下来用github同步整个博客文件夹
 ```Bash
 git init
