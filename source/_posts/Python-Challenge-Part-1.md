@@ -12,7 +12,7 @@ tags: [Python]
 ```
 得到第二关地址http://www.pythonchallenge.com/pc/def/274877906944.html
 <!-- more -->
-<br />
+<br>
 [第1关](http://www.pythonchallenge.com/pc/def/274877906944.html)
 根据图片上的提示, 应该是要做一个映射. 再加上"think twice"这个提示, 应该可以猜出是平移映射两位. 这里用到string的translate来完成
 ``` Python
@@ -26,7 +26,7 @@ URL上的"map" translate后得到"ocr", 这就得到了第三关的地址 http:/
 这一关图片下面有一大段英文, translate后可以得到
 > i hope you didnt translate it by hand. thats what computers are for. doing it in by hand is inefficient and that's why this text is so long. using string.maketrans() is recommended. now apply on the url.
 
-<br />
+<br>
 [第2关](http://www.pythonchallenge.com/pc/def/ocr.html)
 根据提示, 在网页源码里找到一大段字符串。里面写着“find rare characters in the mess bellow”, 所以要我们统计字符的个数, 找出出现次数少的字符。字符串太长, 就不贴上来了, 假定字符串存在msg里
 ``` Python
@@ -62,6 +62,44 @@ y 1
 '''
 ```
 把只出现一次的那几个字母组合一下, 得到"equality", 替换URL里的"ocr"得到 http://www.pythonchallenge.com/pc/def/equality.html
+<br>
+[第3关](http://www.pythonchallenge.com/pc/def/equality.html)
+图片信息依旧没有用， 图片下面英文提示找一个小写字母， 两边各有三个大写字母，注意"EXACTLY"。查看网页源码， 假定把一大堆字符存到msg这个变量
+``` Python
+import re
+>>> pat = re.compile(r'[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-Z]')
+>>> pat.findall(msg)
+['l', 'i', 'n', 'k', 'e', 'd', 'l', 'i', 's', 't']
+```
+得到"linkedlist", 下一关URL http://www.pythonchallenge.com/pc/def/linkedlist.html
+<br>
+[第4关](http://www.pythonchallenge.com/pc/def/linkedlist.html)
+点进去发现html换成php， http://www.pythonchallenge.com/pc/def/linkedlist.php
+进去是一张图片， 查看page source， 有提示
+> urllib may help. DON'T TRY ALL NOTHINGS, since it will never 
+end. 400 times is more than enough.
+
+看来是要用urllib这个库了。回到网页，点击图片, 得到信息 *and the next nothing is 44827* 再看看此时的URL，应该是要不断跳转, 不断更新 *nothing=* 后面的数字
+``` Python
+import re
+import urllib
+
+url_template = 'http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing={0}'
+next_num = '12345'
+pat = re.compile('the next nothing is (\d+)')
+
+while True:
+    response = urllib.urlopen(url_template.format(next_num))
+    text = response.readlines()
+    next_num = pat.findall(text[0])[0]
+    print next_num
+```
+期间会出现两次错误
+> (1)[Yes. Divide by two and keep going.](http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=16044)
+> (2)[There maybe misleading numbers in the text. One example is 82683. Look only for the next nothing and the next nothing is 63579](http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=82682)
+
+按照提示修改就可以继续了。最后得到 *peak.html*, 亦即 http://www.pythonchallenge.com/pc/def/peak.html
 
 <br />
-[第3关](http://www.pythonchallenge.com/pc/def/equality.html)
+[第5关](http://www.pythonchallenge.com/pc/def/peak.html)
+
