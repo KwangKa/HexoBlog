@@ -1,4 +1,4 @@
-title: Python Challenge(Level 7)
+title: Python Challenge (Level 7)
 date: 2015-01-21 10:40:51
 tags: [Python]
 ---
