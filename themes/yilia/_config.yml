@@ -1,7 +1,7 @@
 # Header
 menu:
   #主页: /
-  C++: /tags/C++
+  #C++: /tags/C++
   Python: /tags/Python
   #机器学习: /tags/ML
   #NLP: /tags/NLP
@@ -18,7 +18,7 @@ subnav:
   # twitter: "#"
   # linkedin: "#"
 
-rss: /atom.xml
+#rss: /atom.xml
 
 # Content
 excerpt_link: more

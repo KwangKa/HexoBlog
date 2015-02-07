@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: KwangKa's Blog
+title: 
 subtitle: 曾梦想仗剑走天涯
 description:
-author: KwangKa
+author: Chen
 email: eechengy@gmail.com
 language: zh-CN
 
@@ -48,9 +48,9 @@ tag_map:
 ## 2: Enable pagination
 ## 1: Disable pagination
 ## 0: Fully Disable
-archive: 2
-category: 2
-tag: 2
+archive: 1
+category: 1
+tag: 1
 
 # Server
 ## Hexo uses Connect as a server
