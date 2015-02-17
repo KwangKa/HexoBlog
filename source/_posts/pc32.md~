@@ -1,0 +1,26 @@
+title: Python Challenge (Level 32)
+date: 2015-02-17 21:25:54
+tags: [Python]
+---
+
+[第32关](http://www.pythonchallenge.com/pc/rock/arecibo.html)
+
+这一关卡了好几天，现在还没解决好。为了能在过年前写完所有的关卡，打算先把解题思路弄下来，春节后再完善。
+
+这一关是关于一个叫[Nonogram](http://en.wikipedia.org/wiki/Nonogram)的游戏。大概就是根据每一行每一列的数字来填格子，行列都符合的图案就是要求的答案。改变格子图案，再看看相应的行列的数字变换，大概就能知道这种游戏的玩法了。
+
+<!-- more -->
+
+根据Page Source里的提示，得到一个[warmup.txt](http://www.pythonchallenge.com/pc/rock/warmup.txt).根据这个warmup.txt解出来的的图案是一个向上的箭头。因此我们找到[这个页面](http://www.pythonchallenge.com/pc/rock/up.html)。
+
+接着，我们得到一个更复杂的[up.txt](http://www.pythonchallenge.com/pc/rock/up.txt).根据这个[攻略](http://blog.sina.com.cn/s/blog_4513dde60101fb2y.html)，up.txt解得的图像是一条蛇，python.html.
+
+新页面上有以下内容
+> Congrats! You made it through to the smiling python.
+> "Free" as in "Free speech", not as in "free...
+
+Bing搜一下，找到[这个页面](http://article.yeeyan.org/view/129288/143966)，通关密码是beer. http://www.pythonchallenge.com/pc/rock/beer.html
+
+下面是我用backtracking做的一个解。可以解出较小的图案，比如warmup.txt(LEN=8)。对于较大的，比如up.txt(LEN=32)，就无能为力了。我看了下，主要问题应该是产生candidates并把它们入栈是一次性完成的，会比较慢，占的内存又多。解决方法是入栈一个迭代器而不是所有candidates，每次next得到一个candidate.这个过完年再做。
+
+
